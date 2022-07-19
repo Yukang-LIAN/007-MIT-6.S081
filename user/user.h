@@ -1,5 +1,6 @@
 struct stat;
 struct rtcdate;
+struct sysinfo;
 
 // system calls
 int fork(void);
@@ -34,10 +35,11 @@ void fprintf(int, const char*, ...);
 void printf(const char*, ...);
 char* gets(char*, int max);
 uint strlen(const char*);
-int trace(int);
 void* memset(void*, int, uint);
 void* malloc(uint);
 void free(void*);
 int atoi(const char*);
 int memcmp(const void *, const void *, uint);
 void *memcpy(void *, const void *, uint);
+int trace(int);
+int sysinfo(struct sysinfo*);

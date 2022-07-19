@@ -8,16 +8,18 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 02:55:18 2022
+# Make data base, printed on Tue Jul 19 08:28:24 2022
 
 # Variables
 
-# makefile (from 'Makefile', line 192)
+# makefile (from 'Makefile', line 194)
 QEMUGDB = $(shell if $(QEMU) -help | grep -q '^-gdb'; then echo "-gdb tcp::$(GDBPORT)"; else echo "-s -p $(GDBPORT)"; fi)
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
+# environment
+NODE_TLS_REJECT_UNAUTHORIZED = 0
 # default
 .SHELLFLAGS := -c
 # makefile (from 'Makefile', line 62)
@@ -44,9 +46,9 @@ VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 _ = /usr/bin/cat
 # makefile (from 'Makefile', line 85)
 CFLAGS = -Wall -Werror -O -fno-omit-frame-pointer -ggdb -DSOL_$(LABUPPER) -MD -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -I. $(shell $(CC) -fno-stack-protector -E -x c /dev/null >/dev/null 2>&1 && echo -fno-stack-protector) -fno-pie -no-pie
-# makefile (from 'Makefile', line 267)
+# makefile (from 'Makefile', line 269)
 UPSTREAM := 
-# makefile (from 'Makefile', line 190)
+# makefile (from 'Makefile', line 192)
 GDBPORT = $(shell expr `id -u` % 5000 + 25000)
 # environment
 WALLABY_PRODUCTION = true
@@ -61,19 +63,19 @@ OBJS = $K/entry.o $K/start.o $K/console.o $K/printf.o $K/uart.o $K/kalloc.o $K/s
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
-VSCODE_CWD = /root/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CWD = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /root/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/bin/remote-cli:/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PATH = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/remote-cli:/root/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # makefile (from 'Makefile', line 66)
 LD = $(TOOLPREFIX)ld
-# makefile (from 'Makefile', line 196)
+# makefile (from 'Makefile', line 198)
 CPUS := 3
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-6997875d-8678-4373-a3b2-b6020db0dec4.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-4c176849-f415-4650-a1ea-c61e834f2137.sock
 # makefile (from 'Makefile', line 91)
 LDFLAGS = -z max-page-size=4096
 # makefile (from 'Makefile', line 107)
@@ -83,7 +85,7 @@ ULIB = $U/ulib.o $U/usys.o $U/printf.o $U/umalloc.o
 # environment
 LS_COLORS = 
 # environment
-SSH_AUTH_SOCK = /tmp/vscode-ssh-auth-f23f32e12e06f878cfc376ba0f5b096cc0f8a8ab.sock
+SSH_AUTH_SOCK = /tmp/vscode-ssh-auth-57d7af78de53512cee657b5ef8ef858ddc9d52ee.sock
 # automatic
 %F = $(notdir $%)
 # environment
@@ -100,7 +102,7 @@ HOME = /root
 REMOTE_CONTAINERS = true
 # environment
 LESSCLOSE = /usr/bin/lesspipe %s %s
-# makefile (from 'Makefile', line 235)
+# makefile (from 'Makefile', line 237)
 WEBSUB := https://6828.scripts.mit.edu/2020/handin.py
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
@@ -120,7 +122,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from 'Makefile', line 218)
+# makefile (from 'Makefile', line 220)
 GRADEFLAGS = -v
 # makefile (from 'Makefile', line 64)
 CC = $(TOOLPREFIX)gcc
@@ -133,7 +135,7 @@ MAKE_VERSION := 4.2.1
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-REMOTE_CONTAINERS_IPC = /tmp/vscode-remote-containers-ipc-f23f32e12e06f878cfc376ba0f5b096cc0f8a8ab.sock
+REMOTE_CONTAINERS_IPC = /tmp/vscode-remote-containers-ipc-57d7af78de53512cee657b5ef8ef858ddc9d52ee.sock
 # default
 MAKE_COMMAND := make
 # default
@@ -151,10 +153,10 @@ MFLAGS = -pqrR
 # makefile (from 'Makefile', line 68)
 OBJDUMP = $(TOOLPREFIX)objdump
 # environment
-BROWSER = /root/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/bin/helpers/browser.sh
+BROWSER = /root/.vscode-server/bin/3b889b090b5ad5793f524b5d1d39fda662b96a2a/bin/helpers/browser.sh
 # environment
 VSCODE_HANDLES_SIGPIPE = true
-# makefile (from 'Makefile', line 201)
+# makefile (from 'Makefile', line 203)
 QEMUOPTS = -machine virt -bios none -kernel $K/kernel -m 128M -smp $(CPUS) -nographic -drive file=fs.img,if=none,format=raw,id=x0 -device virtio-blk-device,drive=x0,bus=virtio-mmio-bus.0
 # 'override' directive
 .SHELLSTATUS := 0
@@ -162,7 +164,7 @@ QEMUOPTS = -machine virt -bios none -kernel $K/kernel -m 128M -smp $(CPUS) -nogr
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# makefile (from 'Makefile', line 171)
+# makefile (from 'Makefile', line 173)
 UEXTRA = 
 # environment
 LC_ALL = C
@@ -173,9 +175,9 @@ OBJCOPY = $(TOOLPREFIX)objcopy
 # default
 SUFFIXES := 
 # makefile (from 'Makefile', line 135)
-UPROGS = $U/_cat $U/_echo $U/_forktest $U/_grep $U/_init $U/_kill $U/_ln $U/_ls $U/_mkdir $U/_rm $U/_sh $U/_stressfs $U/_usertests $U/_grind $U/_wc $U/_zombie 
+UPROGS = $U/_cat $U/_echo $U/_forktest $U/_grep $U/_init $U/_kill $U/_ln $U/_ls $U/_mkdir $U/_rm $U/_sh $U/_stressfs $U/_trace $U/_usertests $U/_grind $U/_wc $U/_zombie $U/_sysinfotest 
 # environment
-REMOTE_CONTAINERS_SOCKETS = ["/tmp/vscode-ssh-auth-f23f32e12e06f878cfc376ba0f5b096cc0f8a8ab.sock","/root/.gnupg/S.gpg-agent"]
+REMOTE_CONTAINERS_SOCKETS = ["/tmp/vscode-ssh-auth-57d7af78de53512cee657b5ef8ef858ddc9d52ee.sock","/root/.gnupg/S.gpg-agent"]
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -185,7 +187,7 @@ LABUPPER = $(shell echo $(LAB) | tr a-z A-Z)
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=86/1024=8%, Rehash=0, Collisions=20/259=8%
+# Load=87/1024=8%, Rehash=0, Collisions=20/262=8%
 
 # Pattern-specific Variable Values
 
@@ -195,9 +197,9 @@ LANG = C
 
 # user (device 39, inode 835632): 27 files, no impossibilities.
 # kernel (device 39, inode 835630): 49 files, no impossibilities.
-# . (device 39, inode 835599): 19 files, no impossibilities.
+# . (device 39, inode 835599): 20 files, no impossibilities.
 
-# 95 files, no impossibilities in 3 directories.
+# 96 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -218,6 +220,12 @@ user/_ln:
 #  File has not been updated.
 
 # Not a target:
+user/_trace:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 kernel/fs.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -228,7 +236,7 @@ handin: tarball-pref myapi.key
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 238):
+#  recipe to execute (from 'Makefile', line 240):
 	@SUF=$(LAB); \
 	curl -f -F file=@lab-$$SUF-handin.tar.gz -F key=\<myapi.key $(WEBSUB)/upload \
 	    > /dev/null || { \
@@ -240,7 +248,7 @@ qemu: kernel/kernel fs.img
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 204):
+#  recipe to execute (from 'Makefile', line 206):
 	$(QEMU) $(QEMUOPTS)
 
 # Not a target:
@@ -323,7 +331,7 @@ handin-check:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 246):
+#  recipe to execute (from 'Makefile', line 248):
 	@if ! test -d .git; then \
 		echo No .git directory, is this a git repository?; \
 		false; \
@@ -373,7 +381,7 @@ print-gdbport:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 222):
+#  recipe to execute (from 'Makefile', line 224):
 	@echo $(GDBPORT)
 
 # Not a target:
@@ -432,7 +440,7 @@ user/_forktest: user/forktest.o user/ulib.o user/usys.o user/printf.o user/umall
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-17 01:08:06.238046554
+#  Last modified 2022-07-19 08:27:47.015403454
 #  File has been updated.
 #  Successfully updated.
 
@@ -441,7 +449,7 @@ tarball: handin-check
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 270):
+#  recipe to execute (from 'Makefile', line 272):
 	git archive --format=tar HEAD | gzip > lab-$(LAB)-handin.tar.gz
 
 # Not a target:
@@ -455,7 +463,7 @@ grade:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 225):
+#  recipe to execute (from 'Makefile', line 227):
 	@echo $(MAKE) clean
 	@$(MAKE) clean || \
           (echo "'make clean' failed.  HINT: Do you have another running instance of xv6?" && exit 1)
@@ -516,7 +524,7 @@ user/_sh:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 207):
+#  recipe to execute (from 'Makefile', line 209):
 	sed "s/:1234/:$(GDBPORT)/" < $^ > $@
 
 # Not a target:
@@ -543,12 +551,18 @@ user/_echo:
 #  Modification time never checked.
 #  File has not been updated.
 
-fs.img: mkfs/mkfs README user/_cat user/_echo user/_forktest user/_grep user/_init user/_kill user/_ln user/_ls user/_mkdir user/_rm user/_sh user/_stressfs user/_usertests user/_grind user/_wc user/_zombie
+fs.img: mkfs/mkfs README user/_cat user/_echo user/_forktest user/_grep user/_init user/_kill user/_ln user/_ls user/_mkdir user/_rm user/_sh user/_stressfs user/_trace user/_usertests user/_grind user/_wc user/_zombie user/_sysinfotest
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 177):
+#  recipe to execute (from 'Makefile', line 179):
 	mkfs/mkfs fs.img README $(UEXTRA) $(UPROGS)
+
+# Not a target:
+user/_sysinfotest:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 kernel/swtch.o:
@@ -610,7 +624,7 @@ qemu-gdb: kernel/kernel .gdbinit fs.img
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 210):
+#  recipe to execute (from 'Makefile', line 212):
 	@echo "*** Now run 'gdb' in another window." 1>&2
 	$(QEMU) $(QEMUOPTS) -S $(QEMUGDB)
 
@@ -625,7 +639,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 182):
+#  recipe to execute (from 'Makefile', line 184):
 	rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \
 	*/*.o */*.d */*.asm */*.sym \
 	$U/initcode $U/initcode.out $K/kernel fs.img \
@@ -644,7 +658,7 @@ tarball-pref: handin-check
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 273):
+#  recipe to execute (from 'Makefile', line 275):
 	@SUF=$(LAB); \
 	git archive --format=tar HEAD > lab-$$SUF-handin.tar; \
 	git diff $(UPSTREAM)/$(LAB) > /tmp/lab-$$SUF-diff.patch; \
@@ -695,7 +709,7 @@ myapi.key:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 282):
+#  recipe to execute (from 'Makefile', line 284):
 	@echo Get an API key for yourself by visiting $(WEBSUB)/
 	@read -p "Please enter your API key: " k; \
 	if test `echo "$$k" |tr -d '\n' |wc -c` = 32 ; then \
@@ -804,19 +818,19 @@ kernel/main.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=84/1024=8%, Rehash=0, Collisions=3/203=1%
+# Load=86/1024=8%, Rehash=0, Collisions=3/207=1%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 174 / storage = 1804 B / avg = 10 B
-# current buf: size = 8162 B / used = 1804 B / count = 174 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 177 / storage = 1854 B / avg = 10 B
+# current buf: size = 8162 B / used = 1854 B / count = 177 / avg = 10 B
 
-# strcache performance: lookups = 263 / hit rate = 33%
+# strcache performance: lookups = 266 / hit rate = 33%
 # hash-table stats:
-# Load=174/8192=2%, Rehash=0, Collisions=8/263=3%
-# Finished Make data base on Tue Jul 19 02:55:18 2022
+# Load=177/8192=2%, Rehash=0, Collisions=8/266=3%
+# Finished Make data base on Tue Jul 19 08:28:24 2022
 
  
